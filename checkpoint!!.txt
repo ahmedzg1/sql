@@ -1,0 +1,23 @@
+CREATE TABLE orders (
+    FOREIGN KEY customer_id VARCHAR(20) REFERENCES Persons(customer_id ),
+    FOREIGN KEY product_id VARCHAR(20) REFERENCES Persons(product_id),
+      quantity NUMBER, 
+  total_amount Number
+
+);
+CREATE TABLE product (
+
+   product_id VARCHAR(20)
+      product_name VARCHAR(20) NOT NULL, 
+  price int unsigned
+PRIMARY KEY (product_id ),
+
+);
+CREATE TABLE customer(
+
+   customer_id VARCHAR(20)
+      customer_name VARCHAR(20) NOT NULL, 
+  customer_name Number 
+PRIMARY KEY (customer_id ),
+
+);
